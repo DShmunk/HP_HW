@@ -1,11 +1,9 @@
-'''
-вариация задачи: определение уникальных неповторяющихся строк
-'''
+"""
+определение уникальных неповторяющихся строк
+"""
 def reader(file_name):
     for line in open(file_name, "r"):
         yield line
-
-
 def run_reader():
     file_name = "LCD1602_chars.txt"
     my_reader = reader(file_name)
@@ -18,7 +16,6 @@ def run_reader():
     for k, v in uniq.items():
         if v == 1: print(k)
     return uniq
-
-
 if __name__ == "__main__":
     run_reader()
+    print(len(run_reader()))
