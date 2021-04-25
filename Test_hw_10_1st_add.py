@@ -1,6 +1,8 @@
 import unittest
 import os
 import hw_10_1st_add
+
+
 class TestRunReader(unittest.TestCase):
     def test_run_reader_file_exist(self):
         self.assertIs(os.path.isfile('./LCD1602_chars.txt'), True, "File not exist")
@@ -38,5 +40,7 @@ class TestRunReader(unittest.TestCase):
 
     def test_run_reader_not_result3(self):
         self.assertNotIn('lcd.putchar(chr(203))\n', hw_10_1st_add.run_reader())
+
+
 if __name__ == "__main__":
     unittest.main()
